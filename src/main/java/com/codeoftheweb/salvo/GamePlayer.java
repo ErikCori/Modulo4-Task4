@@ -30,8 +30,8 @@ public class GamePlayer {
     @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
     private Set<Salvo> salvoes;
 
+    //Constructor
     public GamePlayer(){}
-
     public GamePlayer(Date joinDate, Game game, Player player){
         this.joinDate = joinDate;
         this.player = player;
@@ -39,15 +39,12 @@ public class GamePlayer {
     }
 
     //Getters
-
     public Date getJoinDate() {
         return joinDate;
     }
-
     public long getId(){
         return id;
     }
-
     @JsonIgnore
     public Player getPlayer(){
         return player;
@@ -56,11 +53,9 @@ public class GamePlayer {
     public Game getGame(){
         return game;
     }
-
     public Set<Ship> getShips() {
         return ships;
     }
-
     public Set<Salvo> getSalvoes() {
         return salvoes;
     }

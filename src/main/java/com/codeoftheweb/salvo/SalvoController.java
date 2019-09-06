@@ -55,8 +55,8 @@ public class SalvoController {
         dto.put("id", gamePlayer.getGame().getId());
         dto.put("created", gamePlayer.getGame().getCreationDate());
         dto.put("gamePlayers", gamePlayer.getGame().getGamePlayers().stream().map(g ->makeGamePlayerDto(g)));
-        dto.put("Ships", getShipList(gamePlayer.getShips()));
-        dto.put("Salvoes", gamePlayer.getGame().getGamePlayers().stream()
+        dto.put("ships", getShipList(gamePlayer.getShips()));
+        dto.put("salvoes", gamePlayer.getGame().getGamePlayers().stream()
                                                                 .flatMap(gp->gp.getSalvoes()
                                                                                 .stream()
                                                                                 .map(salvo -> makeSalvoDto(salvo))

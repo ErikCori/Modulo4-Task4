@@ -24,27 +24,24 @@ public class Salvo {
     @Column(name = "locations")
     private List<String> locations = new ArrayList<>();
 
+    //Constructor
     public Salvo(){}
-
     public Salvo(GamePlayer gamePlayer, int turn, List<String> locations) {
         this.gamePlayer = gamePlayer;
         this.turn = turn;
         this.locations = locations;
     }
-    //Getters
 
+    //Getters
     public long getId() {
         return id;
     }
-
     public GamePlayer getGamePlayer() {
         return gamePlayer;
     }
-
     public int getTurn() {
         return turn;
     }
-
     public List<String> getLocations() {
         return locations;
     }

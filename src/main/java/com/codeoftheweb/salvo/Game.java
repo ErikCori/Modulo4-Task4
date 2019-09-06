@@ -25,12 +25,12 @@ public class Game {
 
     private Date creationDate;
 
-
+    //Constructor
     public Game(){}
-
     public Game(Date creationDate){
         this.creationDate = creationDate;
     }
+
     //Getters
     public long getId(){
         return id;
@@ -38,12 +38,8 @@ public class Game {
     public Date getCreationDate(){
         return creationDate;
     }
-
     public Set<GamePlayer> getGamePlayers() {
         return gamePlayers;
     }
 
-    public List<Player> getPlayers(){
-        return gamePlayers.stream().map(gamePlayer -> gamePlayer.getPlayer()).collect(toList());
-    }
 }

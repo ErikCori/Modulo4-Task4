@@ -32,12 +32,7 @@ public class SalvoApplication {
 			Player player4 = new Player("t.almeida@ctu.gov");
 			Player player5 = new Player("null");
 
-			playerRepository.save(player1);
-			playerRepository.save(player2);
-			playerRepository.save(player3);
-			playerRepository.save(player4);
-			playerRepository.save(player5);
-
+			playerRepository.saveAll(Arrays.asList(player1, player2, player3, player4, player5));
 			//save a couple of games
 
 			Date date1 = new Date();
@@ -58,15 +53,7 @@ public class SalvoApplication {
 			Game game7 = new Game(date7);
 			Game game8 = new Game(date8);
 
-			gameRepository.save(game1);
-			gameRepository.save(game2);
-			gameRepository.save(game3);
-			gameRepository.save(game4);
-			gameRepository.save(game5);
-			gameRepository.save(game6);
-			gameRepository.save(game7);
-			gameRepository.save(game8);
-
+			gameRepository.saveAll(Arrays.asList(game1, game2, game3, game4, game5, game6, game7, game8));
 			//save a couple of PlayerGames
 
 			GamePlayer gamePlayer1 = new GamePlayer(date1, game1, player1);
